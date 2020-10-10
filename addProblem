@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Enter Problem Name :"
+read prob_name
+
+[[ -z $prob_name ]] && exit 1;
+
+prob_name=${prob_name// /_}
+mkdir -p $prob_name $prob_name/your_output
+touch $prob_name/main.cpp 
+cp -p test.sh Makefile $prob_name
