@@ -10,9 +10,9 @@ for input in "${testcases[@]}"
 do
 	output=${input//input/output}
 	your_output=your_output/`basename $output`
-	## export OUTPUT_PATH=$your_output
+	export OUTPUT_PATH=$your_output
 	echo "$cnt :executing testcase $input"
-	./main < $input > $your_output
+	./main.exe < $input ##> your_output
 	[[ $? -ne 0 ]] && echo "execution failed!" && exit 1
 	result=`diff -w $output $your_output`
 	
