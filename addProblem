@@ -8,4 +8,4 @@ read prob_name
 prob_name=${prob_name// /_}
 mkdir -p $prob_name $prob_name/your_output
 touch $prob_name/main.cpp 
-cp -p test.sh Makefile $prob_name
+cp -p test.sh Makefile .gitignore $prob_name
